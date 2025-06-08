@@ -12,7 +12,8 @@ import {
 import { useState } from "react";
 import { auth } from "@/lib/firebase";
 import { signInAnonymously } from "firebase/auth";
-import { useData } from "@/contexte/DataContext";
+import { useRouter } from "next/navigation";
+
 const provider = new GoogleAuthProvider();
 
 export function LoginButton() {
@@ -105,8 +106,15 @@ export function LoginButton() {
 }
 
 export function LogoutButton() {
+  const router = useRouter();
+
+  const handleLogout = async () => {
+    await auth.signOut();
+    router.push("/");
+  };
+
   return (
-    <button onClick={() => auth.signOut()} className="cursor-pointer">
+    <button onClick={handleLogout} className="cursor-pointer">
       Log out
     </button>
   );
