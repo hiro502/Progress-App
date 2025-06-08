@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useData } from "@/contexte/DataContext";
-import { useSearchParams, useRouter } from "next/navigation";
+import {  useRouter } from "next/navigation";
 import { db } from "@/lib/firebase";
 import AddTaskModal from "@/components/modals/AddTaskModal";
 import {
@@ -21,15 +21,14 @@ const tagOptions = [
   { color: "bg-purple-500", label: "purple" },
 ];
 
-export default function ProjectDetail() {
+export default function ProjectDetail({ projectId }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const projectId = searchParams.get("projectId");
+
+  
   const { projects, tasks, reloadData } = useData();
 
   const project = projects.find((t) => t.projectId === projectId);
 
-  const tasksOfProject = tasks.filter((t) => t.projectId === projectId);
 
   const [projectName, setProjectName] = useState("");
   const [dueDate, setDueDate] = useState("");

@@ -1,6 +1,6 @@
 "use client";
 
-import { useSearchParams, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useData } from "@/contexte/DataContext";
 import { useState, useEffect } from "react";
 import { doc, updateDoc, deleteDoc } from "firebase/firestore";
@@ -16,10 +16,9 @@ const daysOfWeek = [
   { label: "Sam", value: 6 },
 ];
 
-export default function TaskDetail() {
+export default function TaskDetail({ taskId }) {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const taskId = searchParams.get("taskId");
+
   const { tasks, reloadData } = useData();
 
   const task = tasks.find((t) => t.taskId === taskId);

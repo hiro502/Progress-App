@@ -1,11 +1,8 @@
 "use client";
 import MiniTaskCard from "@/components/card/MiniTaskCard";
 import { useData } from "@/contexte/DataContext";
-import { useSearchParams } from "next/navigation";
 
-export default function TasksOfProject() {
-  const searchParams = useSearchParams();
-  const projectId = searchParams.get("projectId");
+export default function TasksOfProject({ projectId }) {
   const { tasks } = useData();
 
   const tasksOfProject = tasks.filter((t) => t.projectId === projectId);
