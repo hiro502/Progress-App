@@ -24,9 +24,9 @@ Elle permet aux utilisateurs de suivre facilement leurs progrès d’apprentissa
 ## Installation
 
 ```bash
-git clone
-cd progress-app
+
 npm install
+npx flowbite-react@latest init
 npm run dev
 ```
 
