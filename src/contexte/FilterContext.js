@@ -5,7 +5,7 @@ import { createContext, useState, useContext } from "react";
 const FilterContext = createContext();
 
 export function FilterProvider({ children }) {
-  const [filterType, setFilterType] = useState("All");
+  const [filterType, setFilterType] = useState("all");
   const [sortType, setSortType] = useState("dueAsc");
   const [selectedTags, setSelectedTags] = useState([]);
 

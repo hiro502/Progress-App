@@ -11,7 +11,7 @@ export default function TasksOfProject({ projectId }) {
     <div className="w-full max-w-3xl mx-auto p-4">
       <h2 className="text-2xl font-bold mb-4">Tâches du projet</h2>
 
-      {tasks.length === 0 ? (
+      {tasksOfProject.length === 0 ? (
         <p className="text-center text-2xl mt-5 pb-3  text-gray-500">
           Ajoutez des tâches
         </p>
