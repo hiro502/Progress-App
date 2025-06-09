@@ -7,6 +7,20 @@
 Progress App est une application simple de gestion de suivi d'apprentissage, développée avec React, Next.js et Firebase.  
 Elle permet aux utilisateurs de suivre facilement leurs progrès d’apprentissage au quotidien.
 
+---
+
+## Aperçu de l'application
+
+### 📁 Exemple 1 : Toutes les tâches
+
+![Toutes les tâches](./public/img-example/all-tasks.png)
+
+### 📊 Exemple 2 : Details du projet
+
+![Details du projet ](./public/img-example/detail-page.png)
+
+---
+
 ## Fonctionnalités principales
 
 - 🔐 **Authentification Firebase**  
