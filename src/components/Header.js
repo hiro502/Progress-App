@@ -7,7 +7,6 @@ import { useData } from "@/contexte/DataContext";
 
 export default function Header() {
   const { user, loading } = useData();
-  console.log(user);
 
   const imgSrc = user?.photoURL || "/default-icon.png";
 

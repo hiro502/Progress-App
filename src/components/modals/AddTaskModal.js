@@ -59,8 +59,6 @@ export default function AddTaskModal({ projectId }) {
       createdAt: new Date(),
     };
 
-    console.log("Tâche créée:", newTask);
-
     try {
       const taskCollectionRef = collection(
         db,

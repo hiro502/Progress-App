@@ -68,12 +68,15 @@ export function LoginButton() {
 
       <Modal show={openModal} onClose={() => setOpenModal(false)}>
         <ModalHeader className="!bg-slate-300 !border-gray-400">
-          <span className="!text-black dark:!text-black text-xl font-medium">
+          <span className="!text-black dark:!text-black text-lg md:text-xl font-medium">
             Choisissez une méthode de connexion
           </span>
         </ModalHeader>
         <ModalBody className="!bg-slate-300 !text-black flex flex-col items-center gap-6 border-none shadow-none">
-          <Button className="text-lg w-[85%] md:w-[60%]" onClick={loginAsGuest}>
+          <Button
+            className="text-sm md:text-lg w-[85%] md:w-[60%]"
+            onClick={loginAsGuest}
+          >
             <img
               src="./default-icon.png"
               alt="Icône invité"
@@ -83,7 +86,7 @@ export function LoginButton() {
           </Button>
 
           <Button
-            className="text-lg w-[85%] md:w-[60%]"
+            className="text-sm md:text-lg w-[85%] md:w-[60%]"
             onClick={loginWithGoogle}
           >
             <img

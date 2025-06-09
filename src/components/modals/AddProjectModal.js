@@ -52,8 +52,6 @@ export default function AddProjectModal() {
       dueDate: new Date(dueDate),
     };
 
-    console.log(newProject);
-
     try {
       const projectCollectionRef = collection(
         db,

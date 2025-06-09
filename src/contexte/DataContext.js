@@ -13,7 +13,7 @@ export const DataProvider = ({ children }) => {
   const [projects, setProjects] = useState([]);
   const [tasks, setTasks] = useState([]);
   const [todaysTasks, setTodaysTasks] = useState([]);
-  console.log(projects, tasks);
+
   useEffect(() => {
     if (!user) return;
 
