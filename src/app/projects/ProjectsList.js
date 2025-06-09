@@ -22,9 +22,9 @@ export default function ProjectsList() {
 
   const filteredProjects = projectsWithProgress.filter((project) => {
     let typeFilterPass = true;
-    if (filterType === "Completed") {
+    if (filterType === "completed") {
       typeFilterPass = project.projectProgress === 100;
-    } else if (filterType === "Incomplete") {
+    } else if (filterType === "incomplete") {
       typeFilterPass = project.projectProgress < 100;
     }
 

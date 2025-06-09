@@ -8,9 +8,9 @@ export default function TasksListBase({ tasks, children }) {
   // Filters
   const filteredTasks = tasks.filter((task) => {
     const progress = Number(task.taskProgress);
-    if (filterType === "All") return true;
-    if (filterType === "Completed") return progress === 100;
-    if (filterType === "Incomplete") return progress < 100;
+    if (filterType === "all") return true;
+    if (filterType === "completed") return progress === 100;
+    if (filterType === "incomplete") return progress < 100;
     return true;
   });
 

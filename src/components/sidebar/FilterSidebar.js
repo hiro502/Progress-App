@@ -2,7 +2,12 @@
 import { useFilter } from "@/contexte/FilterContext";
 import { usePathname } from "next/navigation";
 
-const FILTERS = ["Tout", "Terminé", "Incomplet"];
+const FILTERS = [
+  { label: "Tout", value: "all" },
+  { label: "Terminé", value: "completed" },
+  { label: "Incomplet", value: "incomplete" },
+];
+
 const SORT_OPTIONS = [
   { label: "Date limite (Croissant)", value: "dueAsc" },
   { label: "Date limite (Décroissant)", value: "dueDesc" },
@@ -46,13 +51,15 @@ export default function FilterSidebar() {
         <div className="space-y-1">
           {FILTERS.map((filter) => (
             <button
-              key={filter}
-              onClick={() => setFilterType(filter)}
+              key={filter.value}
+              onClick={() => setFilterType(filter.value)}
               className={`block w-full text-left px-3 py-1 rounded ${
-                filterType === filter ? "bg-blue-500 text-white" : "bg-gray-200"
+                filterType === filter.value
+                  ? "bg-blue-500 text-white"
+                  : "bg-gray-200"
               }`}
             >
-              {filter}
+              {filter.label}
             </button>
           ))}
         </div>
