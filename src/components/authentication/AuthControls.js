@@ -73,7 +73,7 @@ export function LoginButton() {
           </span>
         </ModalHeader>
         <ModalBody className="!bg-slate-300 !text-black flex flex-col items-center gap-6 border-none shadow-none">
-          <Button className="text-lg w-[60%]" onClick={loginAsGuest}>
+          <Button className="text-lg w-[85%] md:w-[60%]" onClick={loginAsGuest}>
             <img
               src="./default-icon.png"
               alt="Icône invité"
@@ -82,7 +82,10 @@ export function LoginButton() {
             Se connecter en tant qu’invité
           </Button>
 
-          <Button className="text-lg w-[60%]" onClick={loginWithGoogle}>
+          <Button
+            className="text-lg w-[85%] md:w-[60%]"
+            onClick={loginWithGoogle}
+          >
             <img
               src="./google-logo.png"
               alt="Logo Google"

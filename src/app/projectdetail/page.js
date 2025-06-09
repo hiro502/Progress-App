@@ -3,10 +3,9 @@ import TasksOfProject from "./TasksOfProject";
 import ProjectDetail from "./ProjectDetail";
 
 export default function ProjectDetailPage({ searchParams }) {
-
   const projectId = searchParams.projectId;
   return (
-    <div className="w-full flex">
+    <div className="w-full flex flex-col md:flex-row ">
       <Suspense fallback={<div>Chargement des tâches...</div>}>
         <TasksOfProject projectId={projectId} />
       </Suspense>
